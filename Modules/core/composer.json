@@ -1,0 +1,23 @@
+{
+    "name": "tm/core",
+    "discription": "Core Servce",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^7.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "TM\\core\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "TM\\Core\\CoreServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
