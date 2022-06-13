@@ -12,7 +12,6 @@ class CoreServiceProvider extends ServiceProvider
 
     public function boot()
     {
-
         $this->mapApiRoutes();
     }
 

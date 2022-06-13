@@ -1,6 +1,6 @@
 {
     "name": "tm/core",
-    "discription": "Core Servce",
+    "description": "Core Servce",
     "type": "library",
     "license": "MIT",
     "require": {
@@ -8,7 +8,7 @@
     },
     "autoload": {
         "psr-4": {
-            "TM\\core\\": "src"
+            "TM\\Core\\": "src/"
         }
     },
     "extra": {

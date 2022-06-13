@@ -12,9 +12,10 @@
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.75",
+        "laravel/passport": "^10.4",
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
-        "tm/core": "dev-main"
+        "tm/core": "dev-master"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
@@ -28,8 +29,7 @@
         "psr-4": {
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
-            "Database\\Seeders\\": "database/seeders/",
-            "TM\\Core\\": "Modules/core/src"
+            "Database\\Seeders\\": "database/seeders/"
         }
     },
     "autoload-dev": {
