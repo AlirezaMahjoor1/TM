@@ -40,9 +40,13 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        'api' => [
+            'driver' => 'passport',
+            'provider' => 'users',
+        ],
         'apicore' => [
             'driver' => 'passport',
-            'provider' => 'users-core',
+            'provider' => 'users',
         ],
     ],
 
@@ -66,13 +70,8 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => App\Models\User::class,
-        ],
-
-         'users-core' => [
-             'driver' => 'eloquent',
-             'table' => TM\Core\Models\User::class,
-         ],
+            'model' => TM\Core\Models\User::class,
+        ]
     ],
 
     /*
