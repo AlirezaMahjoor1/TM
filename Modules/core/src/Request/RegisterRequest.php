@@ -4,7 +4,7 @@ namespace TM\Core\Request;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class LoginRequest extends FormRequest
+class RegisterRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -13,7 +13,7 @@ class LoginRequest extends FormRequest
      */
     public function authorize()
     {
-        return True;
+        return true;
     }
 
     /**
@@ -24,8 +24,9 @@ class LoginRequest extends FormRequest
     public function rules()
     {
         return [
-            'cell_number' => 'required|string|regex:/^09[0,1,2,3,9]{1}[0-9]{8}$/',
-            'password' => 'required|min:6'
+            'name'=> 'required|string|max:255',
+            'cell_number'=>'required|unique:users|string|regex:/^09[0,1,2,3,9]{1}[0-9]{8}$/',
+            'password'=> 'required|min:6'
         ];
     }
 }

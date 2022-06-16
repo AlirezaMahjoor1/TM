@@ -15,7 +15,8 @@
         "laravel/passport": "^10.4",
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
-        "tm/core": "dev-master"
+        "tm/core": "dev-master",
+        "tm/notification": "dev-main"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
@@ -68,6 +69,10 @@
         {
             "type": "path",
             "url": "./Modules/core"
+        },
+        {
+            "type": "path",
+            "url": "./Modules/notification"
         }
     ]
 }

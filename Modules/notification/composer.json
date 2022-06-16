@@ -1,0 +1,23 @@
+{
+    "name": "tm/notification",
+    "description": "Notification Service",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "TM\\Notification\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^7.4"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "TM\\Notification\\NotificationServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

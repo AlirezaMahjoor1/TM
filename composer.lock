@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "10513eb21f083837f5e6ce4f760a1ed0",
+    "content-hash": "0580f4b12e4c95bb5a06c4628df2d503",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2859,16 +2859,16 @@
         },
         {
             "name": "paragonie/constant_time_encoding",
-            "version": "v2.6.2",
+            "version": "v2.6.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/paragonie/constant_time_encoding.git",
-                "reference": "c1b1d82d109846ba58a4664dc5480c69ad2fc097"
+                "reference": "58c3f47f650c94ec05a151692652a868995d2938"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/paragonie/constant_time_encoding/zipball/c1b1d82d109846ba58a4664dc5480c69ad2fc097",
-                "reference": "c1b1d82d109846ba58a4664dc5480c69ad2fc097",
+                "url": "https://api.github.com/repos/paragonie/constant_time_encoding/zipball/58c3f47f650c94ec05a151692652a868995d2938",
+                "reference": "58c3f47f650c94ec05a151692652a868995d2938",
                 "shasum": ""
             },
             "require": {
@@ -2922,7 +2922,7 @@
                 "issues": "https://github.com/paragonie/constant_time_encoding/issues",
                 "source": "https://github.com/paragonie/constant_time_encoding"
             },
-            "time": "2022-06-13T05:29:16+00:00"
+            "time": "2022-06-14T06:56:20+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -6314,6 +6314,38 @@
             }
         },
         {
+            "name": "tm/notification",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "./Modules/notification",
+                "reference": "ba719d42d4ffe9fa8293cc914f4fbe39ccd23937"
+            },
+            "require": {
+                "php": "^7.4"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "TM\\Notification\\NotificationServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "TM\\Notification\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "Notification Service",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
             "name": "vlucas/phpdotenv",
             "version": "v5.4.1",
             "source": {
@@ -9037,7 +9069,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "tm/core": 20
+        "tm/core": 20,
+        "tm/notification": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
