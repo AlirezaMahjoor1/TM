@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0580f4b12e4c95bb5a06c4628df2d503",
+    "content-hash": "7ec5f324f470c2d65781584c89a4e9d9",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -6315,7 +6315,7 @@
         },
         {
             "name": "tm/notification",
-            "version": "dev-main",
+            "version": "dev-master",
             "dist": {
                 "type": "path",
                 "url": "./Modules/notification",
@@ -9075,7 +9075,8 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.3|^8.0"
+        "php": "^7.3|^8.0",
+        "ext-curl": "*"
     },
     "platform-dev": [],
     "plugin-api-version": "2.3.0"
