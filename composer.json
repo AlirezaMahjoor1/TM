@@ -16,7 +16,8 @@
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
         "tm/core": "dev-master",
-        "tm/notification": "dev-main"
+        "tm/notification": "dev-main",
+        "ext-curl": "*"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
