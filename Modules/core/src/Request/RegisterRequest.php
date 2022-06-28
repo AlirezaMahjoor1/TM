@@ -25,9 +25,10 @@ class RegisterRequest extends FormRequest
      */
     public function rules()
     {
+
         return [
             'name' => 'required|string|max:255',
-            'cell_number' => 'required|string|regex:/^9[0,1,2,3,9]{1}[0-9]{8}$/', new RegisterRule(),
+            'cell_number' => ['required','string','regex:/^9[0,1,2,3,9]{1}[0-9]{8}$/', new RegisterRule],
             'password' => 'required|min:6'
         ];
     }

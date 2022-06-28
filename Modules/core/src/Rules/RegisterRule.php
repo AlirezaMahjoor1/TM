@@ -26,11 +26,11 @@ class RegisterRule implements Rule
      */
     public function passes($attribute, $value)
     {
-        $verified = User::query()->where('cell_number',$value)->where('verified',1)->exists();
-        if($verified)
-        {
+        $verified = User::query()->where('cell_number', $value)->where('verified', 1)->exists();
+        if ($verified) {
+            return false;
+        } else
             return true;
-        }
     }
 
     /**
