@@ -17,8 +17,8 @@ class CreateUsersTable extends Migration
             $table->id();
             $table->string('name')->max(191);
             $table->string('cell_number')->max(20);
+            $table->integer('verified')->nullable();
             $table->string('password')->max(191);
-            $table->integer('verified');
             $table->rememberToken()->nullable();
             $table->timestamps();
         });

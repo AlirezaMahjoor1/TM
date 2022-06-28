@@ -24,8 +24,15 @@ class LoginRequest extends FormRequest
     public function rules()
     {
         return [
-            'cell_number' => 'required|string|regex:/^09[0,1,2,3,9]{1}[0-9]{8}$/',
+            'cell_number' => 'required|string|regex:/^9[0,1,2,3,9]{1}[0-9]{8}$/',
             'password' => 'required|min:6'
+        ];
+    }
+    public function messages()
+    {
+        return [
+            'cell_number.required'=>trans('core::message.cell_phone'),
+            'cell_number.regex' =>trans('core::message.regex')
         ];
     }
 }

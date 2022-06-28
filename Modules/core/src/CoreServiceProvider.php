@@ -5,6 +5,8 @@ namespace TM\Core;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
+use TM\Core\Infrastructures\Interfaces\RegisterRepositoryInterface;
+use TM\Core\Repositories\RegisterRepository;
 
 class CoreServiceProvider extends ServiceProvider
 {
@@ -12,12 +14,16 @@ class CoreServiceProvider extends ServiceProvider
 
     public function boot()
     {
-       $this->loadMigrationsFrom(__DIR__.'./../database/migrations');
+        $this->loadTranslationsFrom(__DIR__ . './../resources/lang', 'core');
+        $this->loadMigrationsFrom(__DIR__ . './../database/migrations');
         $this->mapApiRoutes();
     }
 
     public function register()
     {
+        $this->app->bind(
+            RegisterRepositoryInterface::class,
+            RegisterRepository::class);
 
     }
 
@@ -25,6 +31,7 @@ class CoreServiceProvider extends ServiceProvider
     {
         Route::prefix('api/v1/')
             ->namespace($this->namespace)
-            ->group(__DIR__.'./../routes/api.php');
+            ->group(__DIR__ . './../routes/api.php');
     }
+
 }

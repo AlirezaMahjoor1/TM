@@ -3,6 +3,8 @@
 namespace TM\Core\Request;
 
 use Illuminate\Foundation\Http\FormRequest;
+use TM\Core\Models\User;
+use TM\Core\Rules\RegisterRule;
 
 class RegisterRequest extends FormRequest
 {
@@ -24,9 +26,17 @@ class RegisterRequest extends FormRequest
     public function rules()
     {
         return [
-            'name'=> 'required|string|max:255',
-            'cell_number'=>'required|unique:users|string|regex:/^09[0,1,2,3,9]{1}[0-9]{8}$/',
-            'password'=> 'required|min:6'
+            'name' => 'required|string|max:255',
+            'cell_number' => 'required|string|regex:/^9[0,1,2,3,9]{1}[0-9]{8}$/', new RegisterRule(),
+            'password' => 'required|min:6'
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'cell_number.required'=>trans('core::message.cell_phone'),
+            'cell_number.regex' =>trans('core::message.regex')
         ];
     }
 }

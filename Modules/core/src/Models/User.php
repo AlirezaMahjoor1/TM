@@ -9,9 +9,11 @@ class User extends Authenticatable
 {
     use HasApiTokens;
 
-    protected $fillable =[
+    protected $fillable = [
         'name',
         'cell_number',
-        'password'
+        'password',
+        'verified'
     ];
+
 }
