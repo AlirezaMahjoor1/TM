@@ -15,11 +15,7 @@ class RegisterRepository implements RegisterRepositoryInterface
     public function register(array $data)
     {
         $data['password'] = bcrypt($data['password']);
-        $auth = new UserAuthService($data);
-        $auth->registerUser();
-        $user = new User($data);
-        $user->save();
-
+        $user = User::query()->updateOrCreate(['cell_number' => $data['cell_number']],$data);
 
         UserVerifier::sendCode($user);
 
