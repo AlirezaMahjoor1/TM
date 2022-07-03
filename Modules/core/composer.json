@@ -11,7 +11,8 @@
             "TM\\Core\\": "src/"
         },
         "classmap": [
-            "database/seeders"
+            "database/seeders",
+            "database/factories"
         ]
     },
     "extra": {
