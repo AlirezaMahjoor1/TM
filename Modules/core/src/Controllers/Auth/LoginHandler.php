@@ -17,7 +17,8 @@ class LoginHandler extends Controller
 
         if (auth()->attempt($credentials)) {
             if (UserVerifier::isVerified($request)) {
-                return auth()->user()->createToken('Personal Client')->accessToken;
+                $accessToken = auth()->user()->createToken('Personal Client')->accessToken;
+                return ['token'=>$accessToken];
             } else {
                 return Responser::error(null,trans('core::message.not_verified'));
             }
