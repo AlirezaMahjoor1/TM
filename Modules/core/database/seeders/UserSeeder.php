@@ -20,13 +20,13 @@ class UserSeeder extends Seeder
                     'name'=>'علیرضا مهجور',
                     'cell_number'=> 9192906680,
                     'verified'=>1,
-                    'password'=>123456789,
+                    'password'=>bcrypt(123456789)
                 ],
                 [
                     'name'=>'علیرضا مهجور',
                     'cell_number'=> 9195800056,
                     'verified'=>1,
-                    'password'=>123456789,
+                    'password'=>bcrypt(123456789)
                 ],
 
             ];
