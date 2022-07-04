@@ -8,7 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class District extends Model
 {
     protected $fillable = [
-      'name_fa'  , 'type', 'city_id',
+        'name_fa', 'type', 'city_id',
     ];
+
+    public function city()
+    {
+        $this->belongsTo(City::class);
+    }
 
 }

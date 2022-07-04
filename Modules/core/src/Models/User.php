@@ -25,4 +25,9 @@ class User extends Authenticatable
         $path = 'Database\\Factories\\' . $modelName . 'Factory';
         return new $path;
     }
+
+    public function technicians()
+    {
+        $this->belongsToMany(Technician::class);
+    }
 }
