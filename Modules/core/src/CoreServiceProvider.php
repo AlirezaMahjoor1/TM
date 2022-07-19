@@ -6,7 +6,9 @@ namespace TM\Core;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 use TM\Core\Infrastructures\Interfaces\RegisterRepositoryInterface;
+use TM\Core\Infrastructures\Interfaces\UserRepositoryInterface;
 use TM\Core\Repositories\RegisterRepository;
+use TM\Core\Repositories\UserRepository;
 
 class CoreServiceProvider extends ServiceProvider
 {
@@ -24,7 +26,10 @@ class CoreServiceProvider extends ServiceProvider
         $this->app->bind(
             RegisterRepositoryInterface::class,
             RegisterRepository::class);
-
+        $this->app->bind(
+            UserRepositoryInterface::class,
+            UserRepository::class
+        );
     }
 
     protected function mapApiRoutes()

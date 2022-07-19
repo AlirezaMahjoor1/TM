@@ -9,3 +9,6 @@ Route::namespace('Auth')->group(function () {
     Route::post('verify-register', 'VerifyRegister');
     Route::post('logout', 'LogoutHandler')->middleware('auth:apicore');
 });
+Route::namespace('User')->middleware('auth:apicore')->group(function(){
+    Route::get('/users','IndexUser');
+});
