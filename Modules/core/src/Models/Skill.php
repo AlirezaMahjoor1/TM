@@ -19,4 +19,10 @@ class Skill extends Model
 
         return new $path;
     }
+
+    public function technicians()
+    {
+        return $this->belongsToMany(Technician::class);
+
+    }
 }

@@ -36,4 +36,9 @@ class Technician extends Model
     {
         return $this->belongsTo(District::class);
     }
+
+    public function skills()
+    {
+        return $this->belongsToMany(Skill::class);
+    }
 }

@@ -22,6 +22,8 @@ class TechnicianFactory extends Factory
             'cell_number'=> $this->faker->phoneNumber,
             'verified'=>1,
             'password'=>bcrypt('123456789'),
+            'district_id'=>rand(1,16),
+            'skill_id'=>rand(1,50)
         ];
     }
 

@@ -24,6 +24,7 @@ class CreateTechniciansTable extends Migration
             $table->float('longitude')->nullable();
             $table->unsignedInteger('city_id')->default('16');
             $table->unsignedInteger('district_id')->nullable();
+            $table->unsignedInteger('skill_id')->nullable();
             $table->boolean('is_banned')->nullable();
             $table->rememberToken()->nullable();
             $table->softDeletes();
