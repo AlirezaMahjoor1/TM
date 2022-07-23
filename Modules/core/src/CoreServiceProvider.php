@@ -6,9 +6,9 @@ namespace TM\Core;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 use TM\Core\Infrastructures\Interfaces\RegisterRepositoryInterface;
-use TM\Core\Infrastructures\Interfaces\UserRepositoryInterface;
+use TM\Core\Infrastructures\Interfaces\TechnicianRepositoryInterface;
 use TM\Core\Repositories\RegisterRepository;
-use TM\Core\Repositories\UserRepository;
+use TM\Core\Repositories\TechnicianRepository;
 
 class CoreServiceProvider extends ServiceProvider
 {
@@ -27,8 +27,8 @@ class CoreServiceProvider extends ServiceProvider
             RegisterRepositoryInterface::class,
             RegisterRepository::class);
         $this->app->bind(
-            UserRepositoryInterface::class,
-            UserRepository::class
+            TechnicianRepositoryInterface::class,
+            TechnicianRepository::class
         );
     }
 

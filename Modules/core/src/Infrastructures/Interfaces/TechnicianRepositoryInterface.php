@@ -4,7 +4,7 @@
 namespace TM\Core\Infrastructures\Interfaces;
 
 
-Interface UserRepositoryInterface
+Interface TechnicianRepositoryInterface
 {
     public function index();
 }

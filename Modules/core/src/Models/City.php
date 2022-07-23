@@ -12,6 +12,11 @@ class City extends Model
 
     public function districts()
     {
-        $this->hasMany(District::class);
+       return $this->hasMany(District::class);
+    }
+
+    public function technicians()
+    {
+       return $this->hasMany(Technician::class);
     }
 }

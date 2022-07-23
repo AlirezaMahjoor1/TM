@@ -28,6 +28,6 @@ class User extends Authenticatable
 
     public function technicians()
     {
-        $this->belongsToMany(Technician::class);
+       return $this->belongsToMany(Technician::class);
     }
 }
