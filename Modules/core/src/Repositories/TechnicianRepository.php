@@ -10,9 +10,9 @@ class TechnicianRepository implements TechnicianRepositoryInterface
 {
     public function index()
     {
-        $users = QueryBuilder::for(Technician::class)
-            ->allowedFilters(['name'])
+        $technician = QueryBuilder::for(Technician::class)
+            ->allowedFilters(['district_id','skill_id'])
             ->get();
-        return $users;
+        return $technician;
     }
 }

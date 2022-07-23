@@ -6,5 +6,5 @@ namespace TM\Core\Infrastructures\Interfaces;
 
 Interface TechnicianRepositoryInterface
 {
-    public function index();
+    public function index(array $data);
 }
