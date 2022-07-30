@@ -11,4 +11,5 @@ Route::namespace('Auth')->group(function () {
 });
 Route::namespace('Technician')->middleware('auth:apicore')->group(function(){
     Route::get('/technicians','IndexTechnician');
+//    Rotue::post('/technicians','StoreTechnician');
 });

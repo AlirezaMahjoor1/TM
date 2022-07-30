@@ -16,8 +16,8 @@ class CoreServiceProvider extends ServiceProvider
 
     public function boot()
     {
-        $this->loadTranslationsFrom(__DIR__ . './../resources/lang', 'core');
-        $this->loadMigrationsFrom(__DIR__ . './../database/migrations');
+        $this->loadTranslationsFrom(__DIR__ . '/../resources/lang', 'core');
+        $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
         $this->mapApiRoutes();
     }
 

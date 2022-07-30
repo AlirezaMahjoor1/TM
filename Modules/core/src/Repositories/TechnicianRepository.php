@@ -12,8 +12,13 @@ class TechnicianRepository implements TechnicianRepositoryInterface
     public function index()
     {
         $technician = QueryBuilder::for(Technician::class)
-            ->allowedFilters([AllowedFilter::exact('district_id'),AllowedFilter::exact('skill_id')])
+            ->allowedFilters([AllowedFilter::exact('district_id'), AllowedFilter::exact('skill_id')])
             ->get();
         return $technician;
+    }
+
+    public function store(array $data)
+    {
+
     }
 }
